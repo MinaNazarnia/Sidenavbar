@@ -1,0 +1,92 @@
+@import "./fonts";
+
+.hero-text {
+  @include ESTEDAD_BOLD;
+  font-size: 2.5rem !important;
+  line-height: 1.5 !important;
+}
+
+.title-1 {
+  @include ESTEDAD_SEMI_BOLD;
+  font-size: 2rem !important;
+  line-height: 1.5 !important;
+}
+
+.title-2 {
+  @include ESTEDAD_SEMI_BOLD;
+  font-size: 1.5rem !important;
+  line-height: 1.5 !important;
+}
+
+.title-3 {
+  @include ESTEDAD_SEMI_BOLD;
+  font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+.body-copy-strong {
+  @include ESTEDAD_SEMI_BOLD;
+  font-size: 1rem !important;
+  line-height: 2 !important;
+}
+
+.body-copy-medium {
+  @include ESTEDAD_MEDIUM;
+  font-size: 1rem !important;
+  line-height: 2 !important;
+}
+
+.body-copy-regular {
+  @include ESTEDAD_REGULAR;
+  font-size: 1rem !important;
+  line-height: 2 !important;
+}
+
+.small-copy-strong {
+  @include ESTEDAD_SEMI_BOLD;
+  font-size: 0.875rem !important;
+  line-height: 2 !important;
+}
+
+.small-copy-medium {
+  @include ESTEDAD_MEDIUM;
+  font-size: 0.875rem !important;
+  line-height: 2 !important;
+}
+
+.small-copy-regular {
+  @include ESTEDAD_REGULAR;
+  font-size: 0.875rem !important;
+  line-height: 2 !important;
+}
+
+.caption-strong {
+  @include ESTEDAD_SEMI_BOLD;
+  font-size: 0.75rem !important;
+  line-height: 2 !important;
+}
+
+.caption-medium {
+  @include ESTEDAD_MEDIUM;
+  font-size: 0.75rem !important;
+  line-height: 2 !important;
+}
+
+.caption-regular {
+  @include ESTEDAD_REGULAR;
+  font-size: 0.75rem !important;
+  line-height: 2 !important;
+}
+
+.text-button {
+  @include ESTEDAD_MEDIUM;
+  font-size: 0.875rem !important;
+  line-height: 2 !important;
+}
+
+.link-button {
+  @include ESTEDAD_MEDIUM;
+  font-size: 0.875rem !important;
+  line-height: 2 !important;
+  text-decoration: underline;
+}

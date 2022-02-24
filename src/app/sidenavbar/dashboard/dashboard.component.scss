@@ -1,0 +1,32 @@
+section {
+    min-height: 85vh;
+    background-color: white;
+    border-radius: 12px;
+  }
+  
+  header{
+  height: 56px;
+  }
+  
+  #bootomLeft {
+    position: absolute;
+    animation: fade 4s infinite ease-in-out;
+  }
+  
+  @keyframes fade {
+    0% {
+      left: 10%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .btn-accent-overlay{
+    width: auto !important;
+    padding: 4px 8px !important;
+  }
+  
+  a:hover{
+    cursor: pointer;
+  }

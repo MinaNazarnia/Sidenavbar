@@ -1,0 +1,273 @@
+<mat-drawer-container class="example-container" autosize>
+
+  <!-- ? Sidenavbar -->
+  <mat-drawer #drawer class="example-sidenav" opened="true" disableClose="true" mode="side">
+
+    <!-- ? Dashboard -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="fluent:home-20-regular"></span>
+      </button>
+
+      <button mat-list-item class="btn pointer white" *ngIf="!showFiller">
+        <span class="iconify medium-icon" data-icon="fluent:home-20-regular"></span>
+        <span class="small-copy-regular pr-1">داشبورد</span>
+      </button>
+
+    </mat-nav-list>
+
+    <!-- ? Users -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="mi:users"></span>
+      </button>
+
+      <mat-accordion *ngIf="!showFiller">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="pointer white d-flex align-items-center">
+              <span class="iconify medium-icon" data-icon="mi:users"></span>
+              <span class="small-copy-regular pr-1">کاربران</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="pr-2">
+            <button mat-list-item class="icon-btn white">
+              <span class="small-copy-regular pointer">
+                همه کاربران
+              </span>
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-nav-list>
+
+    <!-- ? Reading Report -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="fluent:edit-20-regular"></span>
+      </button>
+
+      <button mat-list-item class="btn pointer white" *ngIf="!showFiller">
+        <span class="iconify medium-icon" data-icon="fluent:edit-20-regular"></span>
+        <span class="small-copy-regular pr-1">گزارش‌مطالعه</span>
+      </button>
+    </mat-nav-list>
+
+    <!-- ? Authors -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="icon-park-outline:edit-name"></span>
+      </button>
+
+      <mat-accordion *ngIf="!showFiller">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="pointer white d-flex align-items-center">
+              <span class="iconify medium-icon" data-icon="icon-park-outline:edit-name"></span>
+              <span class="small-copy-regular pr-1">نویسندگان</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="pr-1">
+            <button mat-list-item class="icon-btn white">
+              <span class="small-copy-regular pointer">
+                درخواست‌های نویسندگی
+              </span>
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-nav-list>
+
+    <!-- ? Book Management -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="fluent:book-open-24-filled"></span>
+      </button>
+
+      <mat-accordion *ngIf="!showFiller">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="pointer white d-flex align-items-center ">
+              <span class="iconify medium-icon" data-icon="fluent:book-open-24-filled"></span>
+              <span class="small-copy-regular pr-1">مدیریت کتاب ها</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="pr-1">
+
+            <!--? button-recently-book -->
+            <button mat-list-item class="btn pointer white">
+              <span class="small-copy-regular pr-1">کتاب های اخیر</span>
+            </button>
+
+            <!--? button-parser-->
+            <button mat-list-item class="btn pointer white">
+              <span class="small-copy-regular pr-1">افزودن کتاب</span>
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-nav-list>
+
+    <!-- ? Publishers -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="ph:printer"></span>
+      </button>
+
+      <mat-accordion *ngIf="!showFiller">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="pointer white d-flex align-items-center">
+              <span class="iconify medium-icon" data-icon="ph:printer"></span>
+              <span class="small-copy-regular pr-1">ناشران</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="pr-1">
+            <button mat-list-item class="icon-btn white">
+              <span class="small-copy-regular pointer">
+                همه ناشران
+              </span>
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-nav-list>
+
+    <!-- ? Categories -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="bx:bx-book-content"></span>
+      </button>
+
+      <mat-accordion *ngIf="!showFiller">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="pointer white d-flex align-items-center">
+              <span class="iconify medium-icon" data-icon="bx:bx-book-content"></span>
+              <span class="small-copy-regular pr-1">ژانر ها</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="pr-1">
+
+            <!--? button-Tags -->
+            <button mat-list-item class="icon-btn white">
+              <span class="small-copy-regular pointer">
+                تگ‌ها
+              </span>
+            </button>
+
+            <!--? button-categories -->
+            <button mat-list-item class="icon-btn white">
+              <span class="small-copy-regular pointer">
+                دسته‌بندی‌ها
+              </span>
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-nav-list>
+
+    <!-- ? Banners -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="fluent:slide-multiple-24-regular"></span>
+      </button>
+
+      <button mat-list-item class="btn pointer white" *ngIf="!showFiller">
+        <span class="iconify medium-icon" data-icon="fluent:slide-multiple-24-regular"></span>
+        <span class="small-copy-regular pr-1"> مدیریت بنرها</span>
+      </button>
+    </mat-nav-list>
+
+    <!-- ? Migration -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" *ngIf="showFiller">
+        <span class="iconify medium-icon" data-icon="fluent:airplane-20-regular"></span>
+      </button>
+
+      <mat-accordion *ngIf="!showFiller">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="pointer white d-flex align-items-center">
+              <span class="iconify medium-icon" data-icon="fluent:airplane-20-regular"></span>
+              <span class="small-copy-regular pr-1">مهاجرت ها</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="pr-1">
+
+            <button mat-list-item class="btn d-flex align-items-center pointer">
+              <span class="small-copy-regular white">لیست مهاجرت ها</span>
+            </button>
+
+            <button mat-list-item class="btn d-flex align-items-center pointer">
+              <span class="small-copy-regular white">لیست کتاب ها</span>
+            </button>
+
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-nav-list>
+
+    <!-- ? Collapse Button - Sidenavbar -->
+    <mat-nav-list class="d-flex align-items-center pr-2 m-0">
+
+      <button mat-list-item class="btn pointer white" (click)="showFiller = !showFiller" *ngIf="!showFiller">
+        <span class="iconify" data-icon="ic:twotone-keyboard-double-arrow-right"></span>
+        <span class="small-copy-regular pr-1">بستن</span>
+      </button>
+
+      <!-- ? Collapse Mode -->
+      <button mat-list-item class="btn pointer white" (click)="showFiller = !showFiller" *ngIf="showFiller">
+        <span class="iconify" data-icon="ic:twotone-keyboard-double-arrow-left"></span>
+      </button>
+
+    </mat-nav-list>
+
+  </mat-drawer>
+
+  <!-- ? Header -->
+  <mat-drawer-content>
+
+    <mat-toolbar class="tool-bar d-flex justify-content-between">
+
+      <!-- ? Logo -->
+      <img src="../../assets/images/Logo.svg" />
+
+      <!-- ? Profile Picture -->
+      <button mat-button [matMenuTriggerFor]="menu" class="icon-btn">
+        <img alt="عکس پروفایل" src="../../assets/images/user-fake.svg">
+      </button>
+
+      <!-- ? Exit Button Menu -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item class="small-copy-regular" (click)="exit()">خروج</button>
+      </mat-menu>
+
+    </mat-toolbar>
+
+    <div class="px-md-4 px-2 py-4">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>

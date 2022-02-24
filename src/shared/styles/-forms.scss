@@ -1,0 +1,68 @@
+@import "../../shared/styles/unites";
+@import "../../shared/styles/fonts";
+@import "../../shared/styles/colors";
+
+.form__title {
+    // span -> main title of form
+    font-size: 24px;
+    font-weight: bold;
+    color: $black__shade-7;
+}
+
+.form__section-title {
+    // span -> for form that may have several sections
+    font-size: 18px;
+    font-weight: bold;
+    color: $black__shade-7;
+}
+
+.form__input-title {
+    // label -> title of each input
+    font-size: 16px;
+    color: $black__shade-7;
+}
+
+.form__input {
+    // input -> for inputs expect checkbox and radio
+    background: white;
+    border: 1px solid $black__shade-5;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.form__submit-btn {
+    // button -> main button (submit)
+    background: $accent;
+    border-radius: 8px;
+    color: white;
+    transition: 0.2s;
+    font-size: 20px;
+    width: 170px;
+    height: 52px;
+    &:hover {
+        background-color: $accent__shade-1;
+        transition: 0.2s;
+    }
+    &:focus {
+        background-color: $accent__shade-4;
+        box-shadow: none;
+    }
+}
+
+.form__optional-btn {
+    // button -> optional button (for example return)
+    color: $accent;
+    transition: 0.2s;
+    font-size: 20px;
+    width: 170px;
+    height: 52px;
+    border-radius: 8px;
+    &:hover {
+        background-color: rgba(212, 212, 212, 0.267);
+        transition: 0.2s;
+    }
+    &:focus {
+        background-color: $black__shade-2;
+        box-shadow: none;
+    }
+}

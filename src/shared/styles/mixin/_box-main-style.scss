@@ -1,0 +1,13 @@
+@import "../colors";
+
+@mixin Box-Style() {
+    padding: 16px;
+    background: #ffffff;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+        border-radius: 0px;
+    }
+}

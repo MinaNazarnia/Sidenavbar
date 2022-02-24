@@ -1,0 +1,149 @@
+// success Primary Colors
+$primary: #2bae66 !important;
+$primary__hover: #69da9c !important;
+$primary__active: #20834d !important;
+$primary__accessible_AA: #20834d !important;
+$primary__accessible_AA__hover: #30c373 !important;
+$primary__accessible_AA__active: #165733 !important;
+$primary__accessible_AAA: #19653c !important;
+$primary__accessible_AAA__hover: #27a05e !important;
+$primary__accessible_AAA__active: #12492b !important;
+// ! shade
+$primary__shade-1: #27a05e !important;
+$primary__shade-2: #249155 !important;
+$primary__shade-3: #20834d !important;
+$primary__shade-4: #1d7444 !important;
+$primary__shade-5: #19653c !important;
+$primary__shade-6: #165733 !important;
+$primary__shade-7: #12492b !important;
+$primary__shade-8: #0e3a22 !important;
+$primary__shade-9: #0b2b1a !important;
+$primary__shade-10: #071d11 !important;
+// ! tint
+$primary__tint-1: #eafaf1 !important;
+$primary__tint-2: #d4f4e3 !important;
+$primary__tint-3: #bfefd5 !important;
+$primary__tint-4: #aaeac7 !important;
+$primary__tint-5: #94e5b8 !important;
+$primary__tint-6: #7fdfaa !important;
+$primary__tint-7: #69da9c !important;
+$primary__tint-8: #54d58e !important;
+$primary__tint-9: #3fcf80 !important;
+$primary__tint-10: #30c373 !important;
+
+// Secondary Colors
+$secondary: #f8d098 !important;
+$secondary__hover: #e4c59d !important;
+$secondary__active: #cb8f41 !important;
+$secondary__accessible_AA: #8c6026 !important;
+$secondary__accessible_AA__hover: #d19c58 !important;
+$secondary__accessible_AA__active: #5d401a !important;
+$secondary__accessible_AAA: #755020 !important;
+$secondary__accessible_AAA__hover: #d8aa70 !important;
+$secondary__accessible_AAA__active: #463013 !important;
+// ! shade
+$secondary__shade-1: #d8aa70 !important;
+$secondary__shade-2: #d19c58 !important;
+$secondary__shade-3: #cb8f41 !important;
+$secondary__shade-4: #bb8033 !important;
+$secondary__shade-5: #a3702d !important;
+$secondary__shade-6: #8c6026 !important;
+$secondary__shade-7: #755020 !important;
+$secondary__shade-8: #5d401a !important;
+$secondary__shade-9: #463013 !important;
+$secondary__shade-10: #2f200d !important;
+// ! tint
+$secondary__tint-1: #fcf9f4 !important;
+$secondary__tint-2: #f9f2e9 !important;
+$secondary__tint-3: #f6ecde !important;
+$secondary__tint-4: #f3e5d3 !important;
+$secondary__tint-5: #f0dfc8 !important;
+$secondary__tint-6: #edd8be !important;
+$secondary__tint-7: #ead2b3 !important;
+$secondary__tint-8: #e7cba8 !important;
+$secondary__tint-9: #e4c59d !important;
+$secondary__tint-10: #e1be92 !important;
+
+// link Accent Colors
+$accent: #00a0ff !important;
+$accent__hover: #74cbff !important;
+$accent__active: #0078bf !important;
+$accent__accessible_AA: #0078bf !important;
+$accent__accessible_AA__hover: #17a9ff !important;
+$accent__accessible_AA__active: #005d95 !important;
+$accent__accessible_AAA: #005d95 !important;
+$accent__accessible_AAA__hover: #0093ea !important;
+$accent__accessible_AAA__active: #005080 !important;
+// ! shade
+$accent__shade-1: #0093ea !important;
+$accent__shade-2: #0085d5 !important;
+$accent__shade-3: #0078bf !important;
+$accent__shade-4: #006baa !important;
+$accent__shade-5: #005d95 !important;
+$accent__shade-6: #005080 !important;
+$accent__shade-7: #00436a !important;
+$accent__shade-8: #003555 !important;
+$accent__shade-9: #002840 !important;
+$accent__shade-10: #001b2a !important;
+// ! tint
+$accent__tint-1: #e8f6ff !important;
+$accent__tint-2: #d1eeff !important;
+$accent__tint-3: #b9e5ff !important;
+$accent__tint-4: #a2dcff !important;
+$accent__tint-5: #8bd4ff !important;
+$accent__tint-6: #74cbff !important;
+$accent__tint-7: #5dc3ff !important;
+$accent__tint-8: #46baff !important;
+$accent__tint-9: #2eb1ff !important;
+$accent__tint-10: #17a9ff !important;
+
+// ? shade of Black
+$black__shade-1: #e7ebee !important;
+$black__shade-2: #ced3d7 !important;
+$black__shade-3: #b7bdc1 !important;
+$black__shade-4: #9ba6ad !important;
+$black__shade-5: #878f95 !important;
+$black__shade-6: #6f797f !important;
+$black__shade-7: #576269 !important;
+$black__shade-8: #404c53 !important;
+$black__shade-9: #26343c !important;
+$black__shade-10: #0f1e27 !important;
+
+// ? Surface Colors
+$surface_shallow: #f2f5f8 !important;
+$surface_white: #fff !important;
+$surface_deep: #03121b !important;
+
+// ? System Colors
+// success
+$success: #2bae66 !important;
+$success__hover: #69da9c !important;
+$success__active: #1d7444 !important;
+$success__accessible: #165733 !important;
+$success__background: #eef6f1 !important;
+
+// link
+$link: #00a0ff !important;
+$link__hover: #74cbff !important;
+$link__active: #0078bf !important;
+$link__accessible: #005d95 !important;
+$link__background: #ebf7fe !important;
+
+// warning
+$warning: #ffa63e !important;
+$warning__hover: #ffc178 !important;
+$warning__active: #a65a02 !important;
+$warning__accessible: #7d4400 !important;
+$warning__background: #fcf6ee !important;
+
+// error
+$error: #ed3636 !important;
+$error__hover: #ff7878 !important;
+$error__active: #d12d2d !important;
+$error__accessible: #a41313 !important;
+$error__background: #fff5f5 !important;
+
+// ? Other Colors
+$purple: rgba(85, 56, 199, 1) !important ;
+$purple__background: rgba(85, 56, 199, 0.08) !important  ;
+$color__raiting: #ffd53e !important  ;

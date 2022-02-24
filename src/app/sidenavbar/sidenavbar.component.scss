@@ -1,0 +1,53 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-events {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #555;
+}
+
+@import "../../shared/styles/colors";
+
+:host::ng-deep {
+  .mat-drawer-inner-container,
+  .mat-toolbar {
+    background-color: $surface_deep;
+  }
+
+  .mat-drawer-inner-container {
+    padding: 0 8px !important;
+  }
+
+  .mat-expansion-panel {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+  .mat-expansion-indicator::after {
+    color: white !important;
+  }
+}
+
+.sidenav-container {
+  height: 100%;
+  background-color: $surface_shallow;
+}
+
+.tool-bar {
+  background-color: $surface_shallow;
+}
+
+.exit-button {
+  position: fixed;
+  bottom: 0px;
+  background-color: $surface_deep;
+  width: 200px;
+  box-shadow: 1px -12px 24px 13px $surface_deep;
+}

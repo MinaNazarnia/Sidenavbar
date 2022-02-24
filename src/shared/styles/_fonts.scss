@@ -1,0 +1,77 @@
+// ? Estedad Font
+// ? Light
+// @font-face {
+//   font-family: ESTEDAD_LIGHT;
+//   src: url("../../assets/fonts/Estedad_v5/Static/woff2/Estedad-Light.woff2") format("woff2");
+//   font-display: swap;
+// }
+// @mixin ESTEDAD_LIGHT {
+//   font-family: ESTEDAD_LIGHT !important;
+// }
+
+// ? Regular
+@font-face {
+  font-family: ESTEDAD_REGULAR;
+  src: url("../../assets/fonts/Estedad_v5/Static/woff2/Estedad-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@mixin ESTEDAD_REGULAR {
+  font-family: ESTEDAD_REGULAR !important;
+}
+
+// ? Medium
+@font-face {
+  font-family: ESTEDAD_MEDIUM;
+  src: url("../../assets/fonts/Estedad_v5/Static/woff2/Estedad-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@mixin ESTEDAD_MEDIUM {
+  font-family: ESTEDAD_MEDIUM !important;
+}
+
+// ? Bold
+@font-face {
+  font-family: ESTEDAD_BOLD;
+  src: url("../../assets/fonts/Estedad_v5/Static/woff2/Estedad-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+@mixin ESTEDAD_BOLD {
+  font-family: ESTEDAD_BOLD !important;
+}
+
+// ? Extra Bold
+// @font-face {
+//   font-family: ESTEDAD_EXTRA_BOLD;
+//   src: url("/assets/fonts/Estedad_v5/Static/woff2/Estedad-ExtraBold.woff2");
+// font-display: swap;
+// }
+// @mixin ESTEDAD_EXTRA_BOLD {
+//   font-family: ESTEDAD_EXTRA_BOLD !important;
+// }
+// ? Thin
+// @font-face {
+//   font-family: ESTEDAD_THIN;
+//   src: url("/assets/fonts/Estedad_v5/Static/woff2/Estedad-Thin.woff2");
+// font-display: swap;
+// }
+// @mixin ESTEDAD_THIN {
+//   font-family: ESTEDAD_THIN !important;
+// }
+// ? Extra Light
+// @font-face {
+//   font-family: ESTEDAD_EXTRA_LIGHT;
+//   src: url("/assets/fonts/Estedad_v5/Static/woff2/Estedad-ExtraLight.woff2");
+// font-display: swap;
+// }
+// @mixin ESTEDAD_EXTRA_LIGHT {
+//   font-family: ESTEDAD_EXTRA_LIGHT !important;
+// }
+// ? Semi Bold
+@font-face {
+  font-family: ESTEDAD_SEMI_BOLD;
+  src: url("../../assets/fonts/Estedad_v5/Static/woff2/Estedad-SemiBold.woff2") format("woff2");
+  font-display: swap;
+}
+@mixin ESTEDAD_SEMI_BOLD {
+  font-family: ESTEDAD_SEMI_BOLD !important;
+}

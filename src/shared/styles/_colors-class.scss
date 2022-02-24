@@ -1,0 +1,398 @@
+// success Primary Colors
+.primary {
+    color: #2bae66;
+}
+.primary__hover {
+    color: #69da9c;
+}
+.primary__active {
+    color: #20834d;
+}
+.primary__accessible_AA {
+    color: #20834d;
+}
+.primary__accessible_AA__hover {
+    color: #30c373;
+}
+.primary__accessible_AA__active {
+    color: #165733;
+}
+.primary__accessible_AAA {
+    color: #19653c;
+}
+.primary__accessible_AAA__hover {
+    color: #27a05e;
+}
+.primary__accessible_AAA__active {
+    color: #12492b;
+}
+// ! shade
+.primary__shade-1 {
+    color: #27a05e;
+}
+.primary__shade-2 {
+    color: #249155;
+}
+.primary__shade-3 {
+    color: #20834d;
+}
+.primary__shade-4 {
+    color: #1d7444;
+}
+.primary__shade-5 {
+    color: #19653c;
+}
+.primary__shade-6 {
+    color: #165733;
+}
+.primary__shade-7 {
+    color: #12492b;
+}
+.primary__shade-8 {
+    color: #0e3a22;
+}
+.primary__shade-9 {
+    color: #0b2b1a;
+}
+.primary__shade-10 {
+    color: #071d11;
+}
+// ! tint
+.primary__tint-1 {
+    color: #eafaf1;
+}
+.primary__tint-2 {
+    color: #d4f4e3;
+}
+.primary__tint-3 {
+    color: #bfefd5;
+}
+.primary__tint-4 {
+    color: #aaeac7;
+}
+.primary__tint-5 {
+    color: #94e5b8;
+}
+.primary__tint-6 {
+    color: #7fdfaa;
+}
+.primary__tint-7 {
+    color: #69da9c;
+}
+.primary__tint-8 {
+    color: #54d58e;
+}
+.primary__tint-9 {
+    color: #3fcf80;
+}
+.primary__tint-10 {
+    color: #30c373;
+}
+
+// Secondary Colors
+.secondary {
+    color: #f8d098;
+}
+.secondary__hover {
+    color: #e4c59d;
+}
+.secondary__active {
+    color: #cb8f41;
+}
+.secondary__accessible_AA {
+    color: #8c6026;
+}
+.secondary__accessible_AA__hover {
+    color: #d19c58;
+}
+.secondary__accessible_AA__active {
+    color: #5d401a;
+}
+.secondary__accessible_AAA {
+    color: #755020;
+}
+.secondary__accessible_AAA__hover {
+    color: #d8aa70;
+}
+.secondary__accessible_AAA__active {
+    color: #463013;
+}
+// ! shade
+.secondary__shade-1 {
+    color: #d8aa70;
+}
+.secondary__shade-2 {
+    color: #d19c58;
+}
+.secondary__shade-3 {
+    color: #cb8f41;
+}
+.secondary__shade-4 {
+    color: #bb8033;
+}
+.secondary__shade-5 {
+    color: #a3702d;
+}
+.secondary__shade-6 {
+    color: #8c6026;
+}
+.secondary__shade-7 {
+    color: #755020;
+}
+.secondary__shade-8 {
+    color: #5d401a;
+}
+.secondary__shade-9 {
+    color: #463013;
+}
+.secondary__shade-10 {
+    color: #2f200d;
+}
+// ! tint
+.secondary__tint-1 {
+    color: #fcf9f4;
+}
+.secondary__tint-2 {
+    color: #f9f2e9;
+}
+.secondary__tint-3 {
+    color: #f6ecde;
+}
+.secondary__tint-4 {
+    color: #f3e5d3;
+}
+.secondary__tint-5 {
+    color: #f0dfc8;
+}
+.secondary__tint-6 {
+    color: #edd8be;
+}
+.secondary__tint-7 {
+    color: #ead2b3;
+}
+.secondary__tint-8 {
+    color: #e7cba8;
+}
+.secondary__tint-9 {
+    color: #e4c59d;
+}
+.secondary__tint-10 {
+    color: #e1be92;
+}
+
+// link Accent Colors
+.accent {
+    color: #00a0ff!important;
+}
+.accent__hover {
+    color: #74cbff;
+}
+.accent__active {
+    color: #0078bf;
+}
+.accent__accessible_AA {
+    color: #0078bf;
+}
+.accent__accessible_AA__hover {
+    color: #17a9ff;
+}
+.accent__accessible_AA__active {
+    color: #005d95;
+}
+.accent__accessible_AAA {
+    color: #005d95;
+}
+.accent__accessible_AAA__hover {
+    color: #0093ea;
+}
+.accent__accessible_AAA__active {
+    color: #005080;
+}
+// ! shade
+.accent__shade-1 {
+    color: #0093ea;
+}
+.accent__shade-2 {
+    color: #0085d5;
+}
+.accent__shade-3 {
+    color: #0078bf;
+}
+.accent__shade-4 {
+    color: #006baa;
+}
+.accent__shade-5 {
+    color: #005d95;
+}
+.accent__shade-6 {
+    color: #005080;
+}
+.accent__shade-7 {
+    color: #00436a;
+}
+.accent__shade-8 {
+    color: #003555;
+}
+.accent__shade-9 {
+    color: #002840;
+}
+.accent__shade-10 {
+    color: #001b2a;
+}
+// ! tint
+.accent__tint-1 {
+    color: #e8f6ff;
+}
+.accent__tint-2 {
+    color: #d1eeff;
+}
+.accent__tint-3 {
+    color: #b9e5ff;
+}
+.accent__tint-4 {
+    color: #a2dcff;
+}
+.accent__tint-5 {
+    color: #8bd4ff;
+}
+.accent__tint-6 {
+    color: #74cbff;
+}
+.accent__tint-7 {
+    color: #5dc3ff;
+}
+.accent__tint-8 {
+    color: #46baff;
+}
+.accent__tint-9 {
+    color: #2eb1ff;
+}
+.accent__tint-10 {
+    color: #17a9ff;
+}
+
+// ? shade of Black
+.black__shade-1 {
+    color: #e7ebee !important;
+}
+.black__shade-2 {
+    color: #ced3d7;
+}
+.black__shade-3 {
+    color: #b7bdc1;
+}
+.black__shade-4 {
+    color: #9ba6ad !important;
+}
+.black__shade-5 {
+    color: #878f95;
+}
+.black__shade-6 {
+    color: #6f797f !important;
+}
+.black__shade-7 {
+    color: #576269;
+}
+.black__shade-8 {
+    color: #404c53;
+}
+.black__shade-9 {
+    color: #26343c;
+}
+.black__shade-10 {
+    color: #0f1e27;
+}
+
+// ? Surface Colors
+.surface_shallow {
+    color: #f2f5f8;
+}
+.surface_white {
+    color: #fff;
+}
+.surface_deep {
+    color: #03121b;
+}
+
+// ? System Colors
+// success
+.success {
+    color: #2bae66;
+}
+.success__hover {
+    color: #69da9c;
+}
+.success__active {
+    color: #1d7444;
+}
+.success__accessible {
+    color: #165733;
+}
+.success__background {
+    color: #eef6f1;
+}
+
+// link
+.link__color {
+    color: #00a0ff !important;
+}
+.link__hover {
+    color: #74cbff;
+}
+.link__active {
+    color: #0078bf;
+}
+.link__accessible {
+    color: #005d95;
+}
+.link__background {
+    color: #ebf7fe;
+}
+
+// warning
+.warning {
+    color: #ffa63e;
+}
+.warning__hover {
+    color: #ffc178;
+}
+.warning__active {
+    color: #a65a02;
+}
+.warning__accessible {
+    color: #7d4400;
+}
+.warning__background {
+    color: #fcf6ee;
+}
+
+// error
+.error {
+    color: #ed3636;
+}
+.error__hover {
+    color: #ff7878;
+}
+.error__active {
+    color: #d12d2d;
+}
+.error__accessible {
+    color: #a41313;
+}
+.error__background {
+    color: #fff5f5;
+}
+
+// ? Other Colors
+.purple {
+    color: rgba(85, 56, 199, 1);
+}
+.purple__background {
+    color: rgba(85, 56, 199, 0.08);
+}
+.color__raiting {
+    color: #ffd53e;
+}
+.white {
+    color: white !important;
+}

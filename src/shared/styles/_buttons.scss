@@ -1,0 +1,950 @@
+@import "./colors";
+@import "./fonts";
+
+// ? Sizes
+$small_width: 86px;
+$small_max_width: 106px;
+$small_height: 32px;
+$small_radius: 10px;
+$small_font_size: 10px;
+$small_padding: 16px;
+
+$normal_width: 113px;
+$normal_max_width: 133px;
+$normal_height: 40px;
+$normal_radius: 12px;
+$normal_font_size: 12px;
+$normal_padding: 24px;
+
+$larg_width: 140px;
+$larg_max_width: 168px;
+$larg_height: 48px;
+$larg_radius: 14px;
+$larg_font_size: 14px;
+$larg_padding: 32px;
+
+$extraLarg_width: 156px;
+$extraLarg_max_width: 184px;
+$extraLarg_height: 64px;
+$extraLarg_radius: 16px;
+$extraLarg_font_size: 14px;
+$extraLarg_padding: 40px;
+
+$dashed: "dashed";
+$circle: "circle";
+$outline: "outline";
+$overLay: "overLay";
+$link: "link";
+
+@function padd($size) {
+  $res: 0 0;
+
+  @if $size==$small_height {
+    $res: 0 $small_padding;
+    @return $res;
+  }
+
+  @else if $size==$normal_height {
+    $res: 0 $normal_padding;
+    @return $res;
+  }
+
+  @else if $size==$larg_height {
+    $res: 0 $larg_padding;
+    @return $res;
+  }
+
+  @else if $size==$extraLarg_height {
+    $res: 0 $extraLarg_padding;
+    @return $res;
+  }
+}
+
+@mixin disabled {
+  cursor: not-allowed !important;
+  color: $surface_shallow;
+  background-color: $black__shade-3;
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3) {
+    cursor: not-allowed !important;
+  }
+
+  &:hover {
+    background-color: $black__shade-3;
+  }
+}
+
+@mixin BaseButton($backgroundColor, $color) {
+  text-align: center !important;
+  border: none;
+  color: $color;
+  transition: 0.2s;
+  background-color: $backgroundColor;
+  cursor: pointer;
+  @include ESTEDAD_REGULAR;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  &:disabled {
+    @include disabled;
+  }
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  span {
+    cursor: pointer !important;
+  }
+
+}
+
+@mixin AdvanceButton($backgroundColor, $color, $size, $kind: "") {
+  @include BaseButton();
+}
+
+@mixin CircleButton($backgroundColor, $color, $size) {
+    border: none;
+    width: $size;
+    height: $size;
+    color: $color;
+    transition: 0.2s;
+    border-radius: 50%;
+    background-color: $backgroundColor;
+    padding: 0!important;
+    &:disabled {
+        @include disabled;
+    }
+}
+
+@mixin DashedButton($color, $width, $height) {
+  border: 1px dashed $color;
+  min-width: $width;
+  height: $height;
+  color: $color;
+  transition: 0.2s;
+  background-color: transparent !important;
+
+  &:disabled {
+    @include disabled;
+  }
+}
+
+@mixin OutlineButton($color, $width, $height) {
+  border: 1px solid $color;
+  min-width: $width;
+  height: $height;
+  color: $color;
+  transition: 0.2s;
+  background-color: transparent !important;
+
+  &:disabled {
+    @include disabled;
+  }
+}
+
+@mixin LinkButton($color, $width, $height) {
+  border: none !important;
+  min-width: $width;
+  height: $height;
+  color: $color;
+  transition: 0.2s;
+  background-color: transparent !important;
+
+  &:disabled {
+    @include disabled;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// * Primary Button
+@mixin Primary($width, $height, $radius, $fontSize, $kind: "") {
+  line-height: 2;
+  font-size: 1rem;
+
+  @if $width==$small_width {
+    font-size: 0.75rem;
+  }
+
+  @else if $width==$normal_width {
+    font-size: 0.875rem;
+  }
+
+  @else if $width==$larg_width {
+    font-size: 1rem;
+  }
+
+  @include BaseButton($primary, white);
+  border-radius: $radius;
+  font-size: $fontSize;
+
+  &:hover {
+    @if $kind==$outline {
+      background-color: transparent;
+      color: $primary__hover;
+      border: 1px solid $primary__hover;
+    }
+
+    @else {
+      background-color: $primary__tint-6;
+    }
+  }
+
+  &:active {
+    background-color: $primary__active;
+    // border-color: $primary__active;
+  }
+
+  padding: padd($height);
+
+  @if $kind==$dashed {
+    @include DashedButton($primary, $width, $height);
+  }
+
+  @else if $kind==$circle {
+    @include CircleButton($primary, white, $height);
+  }
+
+  @else if $kind==$outline {
+    @include OutlineButton($primary, $width, $height);
+  }
+
+  @else if $kind==$link {
+    @include LinkButton($primary, $width, $height);
+  }
+
+  @else {
+    min-width: $width;
+    height: $height;
+  }
+}
+
+// ? Accent Button
+@mixin Accent($width, $height, $radius, $fontSize, $kind: "") {
+  line-height: 2;
+  font-size: 1rem;
+
+  @if $width==$small_width {
+    font-size: 0.75rem;
+  }
+
+  @else if $width==$normal_width {
+    font-size: 0.875rem;
+  }
+
+  @else if $width==$larg_width {
+    font-size: 1rem;
+  }
+
+  @include BaseButton($accent, white);
+  border-radius: $radius;
+  font-size: $fontSize;
+  padding: padd($height);
+
+  &:hover {
+    @if $kind==$outline {
+      background-color: transparent;
+      color: $accent__hover;
+      border: 1px solid $accent__hover;
+    }
+
+    @else {
+      background-color: $accent__tint-6;
+    }
+  }
+
+  &:active {
+    background-color: $accent__active;
+  }
+
+  @if $kind==$dashed {
+    @include DashedButton($accent, $width, $height);
+  }
+
+  @else if $kind==$circle {
+    @include CircleButton($accent, white, $height);
+  }
+
+  @else if $kind==$outline {
+    @include OutlineButton($accent, $width, $height);
+  }
+
+  @else if $kind==$link {
+    @include LinkButton($accent, $width, $height);
+  }
+
+  @else {
+    min-width: $width;
+    height: $height;
+    color: white !important;
+  }
+}
+
+// ? Muted Button
+@mixin Muted($width, $height, $radius, $fontSize, $kind: "") {
+  line-height: 2;
+  font-size: 1rem;
+  height: $height;
+
+  @if $width==$small_width {
+    font-size: 0.75rem;
+  }
+
+  @else if $width==$normal_width {
+    font-size: 0.875rem;
+  }
+
+  @else if $width==$larg_width {
+    font-size: 1rem;
+  }
+
+  @include BaseButton($surface_shallow, $black__shade-10);
+  border-radius: $radius;
+  padding: padd($height);
+  font-size: $fontSize;
+
+  &:hover {
+    background-color: $black__shade-3;
+  }
+
+  @if $kind==$dashed {
+    @include DashedButton($surface_shallow, $width, $height);
+  }
+
+  @else if $kind==$circle {
+    @include CircleButton($surface_shallow, $black__shade-1, $height);
+  }
+
+  @else if $kind==$outline {
+    @include OutlineButton($surface_shallow, $width, $height);
+  }
+
+  @else if $kind==$link {
+    @include LinkButton($surface_shallow, $width, $height);
+  }
+
+  @else {
+    min-width: $width;
+    height: $height;
+  }
+}
+
+// ? Light Button
+@mixin Light($width, $height, $radius, $fontSize, $kind: "") {
+  line-height: 2;
+  font-size: 1rem;
+  height: $height;
+
+  @if $width==$small_width {
+    font-size: 0.75rem;
+  }
+
+  @else if $width==$normal_width {
+    font-size: 0.875rem;
+  }
+
+  @else if $width==$larg_width {
+    font-size: 1rem;
+  }
+
+  @include BaseButton(white, $black__shade-8);
+  border-radius: $radius;
+  padding: padd($height);
+  font-size: $fontSize;
+}
+
+// ? Danger
+@mixin Danger($width, $height, $radius, $fontSize, $kind: "") {
+  line-height: 2;
+  font-size: 1rem;
+  &:hover {
+    @if $kind==$outline {
+      background-color: transparent;
+      color: $error__hover;
+      border: 1px solid $error__hover;
+    }
+
+    @else {
+      background-color: $error__hover;
+    }
+  }
+
+  @if $width==$small_width {
+    font-size: 0.75rem;
+  }
+
+  @else if $width==$normal_width {
+    font-size: 0.875rem;
+  }
+
+  @else if $width==$larg_width {
+    font-size: 1rem;
+  }
+
+  @include BaseButton($error, white);
+  border-radius: $radius;
+  padding: padd($height);
+  font-size: $fontSize;
+
+  @if $kind==$dashed {
+    @include DashedButton($error, $width, $height);
+  }
+
+  @else if $kind==$circle {
+    @include CircleButton($error, white, $height);
+  }
+
+  @else if $kind==$outline {
+    @include OutlineButton($error, $width, $height);
+  }
+
+  @else if $kind==$link {
+    @include LinkButton($error, $width, $height);
+  }
+
+  @else {
+    min-width: $width;
+    height: $height;
+  }
+}
+
+// ! Primary Button - Small
+.btn-primary-s {
+  @include Primary($small_width, $small_height, $small_radius, $small_font_size);
+}
+
+// ? Primary Button - Small - Dashed
+.btn-primary-s-d {
+  @include Primary($small_width, $small_height, $small_radius, $small_font_size, $dashed);
+}
+
+// ? Primary Button - Small - Circle
+.btn-primary-s-c {
+  @include Primary($small_width, $small_height, $small_radius, $small_font_size, $circle);
+}
+
+// ? Primary Button - Small - Outline
+.btn-primary-s-o {
+  @include Primary($small_width, $small_height, $small_radius, $small_font_size, $outline);
+}
+
+// ? Primary Button - Small - Link
+.btn-primary-s-l {
+  @include Primary($small_width, $small_height, $small_radius, $small_font_size, $link);
+}
+
+// ! Primary Button - Normal
+.btn-primary {
+  @include Primary($normal_width, $normal_height, $normal_radius, $normal_font_size);
+}
+
+// ? Primary Button - Normal - Dashed
+.btn-primary-d {
+  @include Primary($normal_width, $normal_height, $normal_radius, $normal_font_size, $dashed);
+}
+
+// ? Primary Button - Normal - Circle
+.btn-primary-c {
+  @include Primary($normal_width, $normal_height, $normal_radius, $normal_font_size, $circle);
+}
+
+// ? Primary Button - Normal - Outline
+.btn-primary-o {
+  @include Primary($normal_width, $normal_height, $normal_radius, $normal_font_size, $outline);
+}
+
+// ? Primary Button - Normal - Link
+.btn-primary-link {
+  @include Primary($normal_width, $normal_height, $normal_radius, $normal_font_size, $link);
+}
+
+// ! Primary Button - Larg
+.btn-primary-l {
+  @include Primary($larg_width, $larg_height, $larg_radius, $larg_font_size);
+}
+
+// ? Primary Button - Larg - Dashed
+.btn-primary-l-d {
+  @include Primary($larg_width, $larg_height, $larg_radius, $larg_font_size, $dashed);
+}
+
+// ? Primary Button - Larg - Circle
+.btn-primary-l-c {
+  @include Primary($larg_width, $larg_height, $larg_radius, $larg_font_size, $circle);
+}
+
+// ? Primary Button - Larg - Outline
+.btn-primary-l-o {
+  @include Primary($larg_width, $larg_height, $larg_radius, $larg_font_size, $outline);
+}
+
+// ? Primary Button - Larg - Link
+.btn-primary-l-l {
+  @include Primary($larg_width, $larg_height, $larg_radius, $larg_font_size, $link);
+}
+
+// ! Primary Button - ExtraLarg
+.btn-primary-xl {
+  @include Primary($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size);
+}
+
+// ? Primary Button - ExtraLarg - Dashed
+.btn-primary-xl-d {
+  @include Primary($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size, $dashed);
+}
+
+// ? Primary Button - ExtraLarg - Circle
+.btn-primary-xl-c {
+  @include Primary($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size, $circle);
+}
+
+// ? Primary Button - ExtraLarg - Outline
+.btn-primary-xl-o {
+  @include Primary($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size, $outline);
+}
+
+// ? Primary Button - ExtraLarg - Link
+.btn-primary-xl-l {
+  @include Primary($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size, $link);
+}
+
+// ! Accent Button - Small
+.btn-accent-s {
+  @include Accent($small_width, $small_height, $small_radius, $small_font_size);
+}
+
+// ? Accent Button - Small - Dashed
+.btn-accent-s-d {
+  @include Accent($small_width, $small_height, $small_radius, $small_font_size, $dashed);
+}
+
+// ? Accent Button - Small - Circle
+.btn-accent-s-c {
+  @include Accent($small_width, $small_height, $small_radius, $small_font_size, $circle);
+}
+
+// ? Accent Button - Small - Outline
+.btn-accent-s-o {
+  @include Accent($small_width, $small_height, $small_radius, $small_font_size, $outline);
+}
+
+// ? Accent Button - Small - Link
+.btn-accent-s-l {
+  @include Accent($small_width, $small_height, $small_radius, $small_font_size, $link);
+}
+
+// ! Accent Button - normal
+.btn-accent {
+  @include Accent($normal_width, $normal_height, $normal_radius, $normal_font_size);
+}
+
+// ? Accent Button - normal - Dashed
+.btn-accent-d {
+  @include Accent($normal_width, $normal_height, $normal_radius, $normal_font_size, $dashed);
+}
+
+// ? Accent Button - normal - Circle
+.btn-accent-c {
+  @include Accent($normal_width, $normal_height, $normal_radius, $normal_font_size, $circle);
+}
+
+// ? Accent Button - normal - Outline
+.btn-accent-o {
+  @include Accent($normal_width, $normal_height, $normal_radius, $normal_font_size, $outline);
+}
+
+// ? Accent Button - normal - Link
+.btn-accent-link {
+  @include Accent($normal_width, $normal_height, $normal_radius, $normal_font_size, $link);
+}
+
+// ! Accent Button - larg
+.btn-accent-l {
+  @include Accent($larg_width, $larg_height, $larg_radius, $larg_font_size);
+}
+
+// ? Accent Button - larg - Dashed
+.btn-accent-l-d {
+  @include Accent($larg_width, $larg_height, $larg_radius, $larg_font_size, $dashed);
+}
+
+// ? Accent Button - larg - Circle
+.btn-accent-l-c {
+  @include Accent($larg_width, $larg_height, $larg_radius, $larg_font_size, $circle);
+}
+
+// ? Accent Button - larg - Outline
+.btn-accent-l-o {
+  @include Accent($larg_width, $larg_height, $larg_radius, $larg_font_size, $outline);
+}
+
+// ? Accent Button - larg - Link
+.btn-accent-l-l {
+  @include Accent($larg_width, $larg_height, $larg_radius, $larg_font_size, $link);
+}
+
+// ! Accent Button - ExtraLarg
+.btn-accent-xl {
+  @include Accent($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size);
+}
+
+// ? Accent Button - extraLarg - Dashed
+.btn-accent-xl-d {
+  @include Accent($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size, $dashed);
+}
+
+// ? Accent Button - extraLarg - Circle
+.btn-accent-xl-c {
+  @include Accent($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size, $circle);
+}
+
+// ? Accent Button - extraLarg - Outline
+.btn-accent-xl-o {
+  @include Accent($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size, $outline);
+}
+
+// ? Accent Button - extraLarg - Link
+.btn-accent-xl-l {
+  @include Accent($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size, $link);
+}
+
+// ! Danger Button - Small
+.btn-danger-s {
+  @include Danger($small_width, $small_height, $small_radius, $small_font_size);
+}
+
+// ! Danger Button - Small - Circle
+.btn-danger-s-c {
+    @include Danger($small_width, $small_height, $small_radius, $small_font_size, $circle);
+}
+
+// ! Danger Button - Normall
+.btn-danger {
+  @include Danger($normal_width, $normal_height, $normal_radius, $normal_font_size);
+}
+
+.btn-danger-o {
+  @include Danger($normal_width, $normal_height, $normal_radius, $normal_font_size, $outline);
+}
+
+// ! Danger Button - Larg
+.btn-danger-l {
+  @include Danger($larg_width, $larg_height, $larg_radius, $larg_font_size);
+}
+
+// ! Danger Button - ExteraLarg
+.btn-danger-xl {
+  @include Danger($extraLarg_width, $extraLarg_height, $extraLarg_radius, $extraLarg_font_size);
+}
+
+.btn-muted {
+  @include Muted($normal_width, $normal_height, $normal_radius, $normal_font_size);
+}
+
+.btn-muted-o {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $black__shade-1;
+  background-color: transparent;
+  width: $normal_width;
+  color: $black__shade-5;
+  height: $normal_height;
+  font-size: $normal_font_size;
+  border-radius: $normal_radius;
+  @include ESTEDAD_MEDIUM;
+}
+
+.btn-muted-l {
+  @include Muted($larg_width, $larg_height, $larg_radius, $larg_font_size);
+}
+
+.btn-muted-l-o {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $black__shade-1;
+  background-color: transparent;
+  width: $larg_width;
+  color: $black__shade-5;
+  height: $larg_height;
+  font-size: $larg_font_size;
+  border-radius: $larg_radius;
+  @include ESTEDAD_MEDIUM;
+}
+
+.btn-primary-overlay {
+  text-align: center;
+  border: none;
+  width: $normal_width;
+  height: $normal_height;
+  font-size: $normal_font_size;
+  border-radius: $normal_radius;
+  background-color: $success__background;
+  color: $primary;
+  transition: 0.2s;
+  @include ESTEDAD_REGULAR;
+
+  &:hover {
+    color: $primary__hover;
+  }
+
+  &:active {
+    color: white;
+    background-color: $primary__active;
+  }
+}
+
+.btn-primary-s-overlay {
+  text-align: center;
+  border: none;
+  width: $small_width;
+  height: $small_height;
+  font-size: $small_font_size;
+  border-radius: $small_radius;
+  background-color: $success__background;
+  color: $primary;
+  transition: 0.2s;
+  @include ESTEDAD_REGULAR;
+
+  &:hover {
+    color: $primary__hover;
+  }
+
+  &:active {
+    color: white;
+    background-color: $primary__active;
+  }
+}
+
+.btn-primary-l-overlay {
+  text-align: center;
+  border: none;
+  width: $larg_width;
+  height: $larg_height;
+  font-size: $larg_font_size;
+  border-radius: $larg_radius;
+  background-color: $success__background;
+  color: $primary;
+  transition: 0.2s;
+  @include ESTEDAD_REGULAR;
+
+  &:hover {
+    color: $primary__hover;
+  }
+
+  &:active {
+    color: white;
+    background-color: $primary__active;
+  }
+}
+
+.btn-mute-overlay {
+  text-align: center;
+  border: none;
+  width: $normal_width;
+  height: $normal_height;
+  font-size: $normal_font_size;
+  border-radius: $normal_radius;
+  background-color: $surface_shallow;
+  color: $black__shade-8;
+  transition: 0.2s;
+  @include ESTEDAD_REGULAR;
+
+  &:hover {
+    color: $accent__tint-6;
+  }
+
+  &:active {
+    color: white;
+    background-color: $accent;
+  }
+}
+
+.btn-accent-overlay {
+  text-align: center;
+  border: none;
+  width: $normal_width;
+  height: $normal_height;
+  font-size: $normal_font_size;
+  border-radius: $normal_radius;
+  background-color: $link__background;
+  color: $accent;
+  transition: 0.2s;
+  @include ESTEDAD_REGULAR;
+
+  &:hover {
+    color: $accent__tint-6;
+  }
+
+  &:active {
+    color: white;
+    background-color: $accent;
+  }
+}
+
+.btn-accent-s-overlay {
+  text-align: center;
+  border: none;
+  width: $small_width;
+  height: $small_height;
+  font-size: $small_font_size;
+  border-radius: $small_radius;
+  background-color: $link__background;
+  color: $accent;
+  transition: 0.2s;
+  @include ESTEDAD_REGULAR;
+
+  &:hover {
+    color: $accent__tint-6;
+  }
+
+  &:active {
+    color: white;
+    background-color: $accent;
+  }
+}
+
+.btn-accent-l-overlay {
+  text-align: center;
+  border: none;
+  width: $larg_width;
+  height: $larg_height;
+  font-size: $larg_font_size;
+  border-radius: $larg_radius;
+  background-color: $link__background;
+  color: $accent;
+  transition: 0.2s;
+  @include ESTEDAD_REGULAR;
+
+  &:hover {
+    color: $accent__tint-6;
+  }
+
+  &:active {
+    color: white;
+    background-color: $accent;
+  }
+}
+
+.btn-primary-text {
+  text-align: center;
+  border: none;
+  width: $normal_width;
+  height: $normal_height;
+  font-size: $normal_font_size;
+  background-color: transparent;
+  color: $primary;
+  display: inline-block;
+  position: relative;
+}
+
+.btn-primary-text::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 4px;
+  left: 0;
+  background-color: $primary;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-primary-text:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.btn-primary-text-l {
+  text-align: center;
+  border: none;
+  width: $larg_width;
+  height: $larg_height;
+  font-size: $larg_font_size;
+  background-color: transparent;
+  color: $primary;
+}
+
+.btn-primary-loading {
+  :nth-child(1) {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #eaeaea;
+    animation: donut-spin 0.7s linear infinite;
+    animation-delay: 0.1s;
+    margin: 0 2px;
+  }
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #eaeaea;
+    animation: donut-spin 0.7s linear infinite;
+    animation-delay: 0.3s;
+    margin: 0 2px;
+  }
+
+  &::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #eaeaea;
+    animation: donut-spin 0.7s linear infinite;
+    animation-delay: 0.5s;
+    margin: 0 2px;
+  }
+
+  &:disabled {
+    cursor: default !important;
+  }
+}
+
+.btn-light-l {
+  @include Light($larg_width, $larg_height, $larg_radius, $larg_font_size);
+}
+
+.icon-btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  :nth-child(1),
+  :nth-child(2),
+  :nth-child(3),
+  :nth-child(4) {
+    cursor: pointer !important;
+  }
+}
+
+@keyframes donut-spin {
+  0% {
+    transform: scale(0.3);
+    border-radius: 50%;
+  }
+
+  50% {
+    transform: scale(1.6);
+    border-radius: 50%;
+  }
+}
+
+
+// ? Media Query
+@media(max-width: 575.98px) {
+  .btn-accent {
+    @include Accent($small_width, $small_height, $small_radius, $small_font_size);
+  }
+}
